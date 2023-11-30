@@ -1,4 +1,5 @@
 import { ReactNode, createContext, useState } from "react";
+import Box from "./Box";
 
 type ThemeType = "light" | "Dark";
 
@@ -7,7 +8,7 @@ interface ThemeContextType {
   ToggleTheme: () => void;
 }
 
-const ContextTheme = createContext<ThemeContextType | null>({
+export const ContextTheme = createContext<ThemeContextType>({
   theme: "light",
   ToggleTheme: () => {},
 });
@@ -29,6 +30,7 @@ export default function UseContext() {
     <>
       <ThemeProvider>
         <div>hello</div>
+        <Box />
       </ThemeProvider>
     </>
   );
