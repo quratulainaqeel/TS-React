@@ -1,6 +1,6 @@
 import { ReactNode, createContext, useState } from "react";
 import Box from "./Box";
-
+ 
 type ThemeType = "light" | "Dark";
 
 interface ThemeContextType {
